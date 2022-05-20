@@ -54,7 +54,6 @@ ASSIGNED { RES }
 VERBATIM
 #include <stdlib.h>
 #include <math.h>
-/* #include <values.h> /* contains MAXLONG */
 #include <limits.h>
 #include <time.h> 
 
@@ -66,6 +65,7 @@ VERBATIM
 #endif
 
 #ifndef NRN_VERSION_GTEQ_8_2_0
+extern double hoc_epsilon;
 extern FILE* hoc_obj_file_arg(int narg);
 extern void vector_resize();
 extern int vector_instance_px();
@@ -491,7 +491,7 @@ static double keyind(void* vv) {
   int i, j, k, ni, nk, nv[10], num;
   double *ind, *key, *vvo[10];
   ni = vector_instance_px(vv, &ind); // vv is ind
-  for (i=0;ifarg(i);i++); i--; // drop back by one to get numarg()
+  for (i=0;ifarg(i);i++) {} i--; // drop back by one to get numarg()
   if (i>10) hoc_execerror("ERR: keyind can only handle 9 vectors", 0);
   num = i-1; /* number of vectors to be picked apart */
   for (i=0;i<num;i++) { 
@@ -937,7 +937,6 @@ static double smgs(void* vv) {
   int i, j, nx, xv, nsum, points, maxsz;
   double *x, *sum;
   double  low , high , step , var , svar , scale , arg;
-  extern double hoc_epsilon;
   
   nsum = vector_instance_px(vv, &sum);
   nx = vector_arg_px(1,&x);
