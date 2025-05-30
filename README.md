@@ -9,17 +9,17 @@ nrnivmodl in linux/unix) and begin by starting mosinit.hoc (double
 click in mswin, drag and drop onto nrngui on mac, or "nrngui
 mosinit.hoc" in linux/unix). Press either figure button to generate:
 
-![screenshot1](./screenshot1.png)
+![screenshot1](./screenshot1.png)  
 Fig. 1a
 Small discrepancies between gif background in Grapher and the
 simulation is probably due to slightly incorrect scaling and origin of
 the gif.
 
-![screenshot2](./screenshot2.png)
+![screenshot2](./screenshot2.png)  
 Default parameters replicate Fig. 3A (phi0=5; current injection amp0=1
 muA/cm2).
 
-![screenshot3](./screenshot3.png)
+![screenshot3](./screenshot3.png)  
 Fig. 3B parameters are (phi0=3.3; amp0=1.2); 3C (phi0=2.0; amp0=1.4).
 
 Note: this simulation takes a little more than 3 minutes on a 2GHz
@@ -74,6 +74,8 @@ descriptions. Michael Hines created the fig1a gui.
 Changelog
 ---------
 2014-08-21 ModelDB administrator: updates to run on mswin
+
 2022-05-20 Updated MOD files to contain valid C++ and be compatible
 with the upcoming versions 8.2 and 9.0 of NEURON.
-2025-05-27 – Standardized to Markdown.
+
+2025-05-27 Standardized to Markdown.
